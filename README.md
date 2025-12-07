@@ -1,24 +1,34 @@
-Calculadora Trabalhista – Java + Spring Boot + HTML/CSS/JS
-Projeto simples de calculadora trabalhista para estudo de Java Web, usando Spring Boot no backend e HTML/CSS/JavaScript no frontend.​
-O objetivo é calcular itens como férias, 13º e rescisão básica a partir de dados de salário e contrato.​
+🧮 **Calculadora Trabalhista**
 
-Tecnologias
-Java 17+
+**Java + Spring Boot + HTML/CSS/JavaScript**
 
-Spring Boot (API REST)​
+A Calculadora Trabalhista é um projeto simples desenvolvido para estudo de Java Web, utilizando Spring Boot como backend e HTML/CSS/JavaScript no frontend.
+O objetivo é realizar cálculos básicos como férias proporcionais, 13º salário e rescisão, a partir de informações inseridas pelo usuário.
 
-Maven ou Gradle (build)​
+🚀 **Tecnologias Utilizadas — Backend**
 
-HTML5, CSS3, JavaScript puro (frontend)​​
+☕ **Java 17+**
+🌱 **Spring Boot (API REST)**
+📦 **Maven ou Gradle**
 
-Arquitetura do projeto
-Backend em Spring Boot expondo endpoints REST para cálculo trabalhista.​
 
-Frontend estático (HTML/CSS/JS) consumindo os endpoints via fetch.​​
 
-Estrutura básica (ajuste se mudar o nome dos pacotes):
+🎨 **Tecnologias Utilizadas — Frontend**
 
-text
+🎨 **HTML5**
+🎨 **CSS3**
+⚡ **JavaScript Puro**
+
+
+
+🏗️ ***Arquitetura do Projeto***
+
+📌 Backend → Spring Boot expondo endpoints REST para os cálculos.
+📌 Frontend → HTML/CSS/JS consumindo a API via `fetch`.
+
+Essa estrutura separa claramente interface, lógica e cálculos de negócio.
+
+📁 Estrutura de Pastas
 calculadora-trabalhista/
   backend/
     src/main/java/com/seuusuario/calctrab/
@@ -28,50 +38,69 @@ calculadora-trabalhista/
       model/
     src/main/resources/
       application.properties
+
   frontend/
     index.html
     styles.css
     script.js
-Essa estrutura separa bem as responsabilidades entre API e interface web, mantendo o código organizado para crescimento futuro.​
 
-Funcionalidades previstas (MVP)
-Enviar dados de entrada: salário, tipo de contrato e datas básicas.
+✨ Funcionalidades (MVP)
 
-Calcular valores iniciais (ex.: férias proporcionais e 13º proporcional).
+📤 Entrada de dados: salário, tipo de contrato e datas.
 
-Retornar resultados em JSON pela API e exibir em tela.​
+🧠 Cálculo de férias proporcionais e 13º proporcional.
 
-Vamos começar com poucos campos e fórmulas simples, evoluindo aos poucos (novos endpoints ou novos campos de request/response).​
+📦 Retorno em JSON pela API.
 
-Como rodar o backend
-Entre na pasta backend/.
+🖥️ Exibição dos valores no frontend.
 
-Configure o projeto Spring Boot (via Spring Initializr ou importando na IDE).​
+▶️ Como Rodar o Backend
 
-Com Maven: mvn spring-boot:run
+Entre na pasta `backend/`
 
-A API ficará acessível em http://localhost:8080 (ex.: GET /actuator/health ou GET /api/ping se criarmos um).​
+Configure o projeto Spring Boot
 
-Como rodar o frontend
-Entre na pasta frontend/.
+Execute:
 
-Abra index.html no navegador ou use uma extensão de “Live Server” da IDE.​​
+mvn spring-boot:run
 
-O JavaScript irá chamar a API do Spring Boot (ex.: http://localhost:8080/api/calculos).​
 
-Certifique-se de que o backend está rodando antes de testar os cálculos pelo navegador.​
+A API ficará disponível em:
 
-Próximos passos (checklist)
- Criar projeto Spring Boot básico (endpoint de teste /api/ping).​
+http://localhost:8080
 
- Implementar classe de modelo para entrada de cálculo (request).
 
- Implementar serviço CalculadoraTrabalhistaService com regras iniciais.
+Endpoints úteis:
 
- Criar controlador REST /api/calculos.​
+GET `/actuator/health`
 
- Montar index.html com formulário de dados.
+GET `/api/ping` (se criado)
 
- Implementar script.js chamando a API via fetch.​
+💻 Como Rodar o Frontend
 
- Estilizar com styles.css.
+Entre na pasta `frontend/`
+
+Abra o arquivo `index.html` no navegador
+ou utilize Live Server da sua IDE.
+
+O frontend consumirá a API:
+
+http://localhost:8080/api/calculos
+
+📌 Próximos Passos (Checklist)
+
+ Criar projeto Spring Boot básico
+
+ Criar endpoint `/api/ping`
+
+ Criar classe de modelo para request
+
+ Implementar `CalculadoraTrabalhistaService`
+
+ Criar controlador REST `/api/calculos`
+
+ Criar formulário no `index.html`
+
+ Consumir API no `script.js`
+
+ Estilizar com `styles.css`
